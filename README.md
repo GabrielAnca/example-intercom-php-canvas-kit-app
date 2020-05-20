@@ -9,6 +9,7 @@ See the complete API reference in the [documentation](https://developers.interco
 Just boot the application:
 
 ```
+composer install
 symfony server:start --port:8001
 ```
 
