@@ -28,7 +28,7 @@ class MessengerAppController extends AbstractController
                             "id" => "submit-initialize",
                             "label" => "Submit this canvas!",
                             "action" => [
-                              "type" => "submit"
+                                "type" => "submit"
                             ]
                         ]
                     ]
@@ -65,7 +65,7 @@ class MessengerAppController extends AbstractController
                             "id" => "submit-submit",
                             "label" => "Submit this canvas again!",
                             "action" => [
-                              "type" => "submit"
+                                "type" => "submit"
                             ]
                         ]
                     ]
