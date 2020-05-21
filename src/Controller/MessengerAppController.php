@@ -44,6 +44,7 @@ class MessengerAppController extends AbstractController
     {
         $requestBody = json_decode($request->getContent());
         $componentId = $requestBody->component_id;
+        $time = date('H:i:s');
 
         return $this->json([
             'canvas' => [
@@ -59,6 +60,11 @@ class MessengerAppController extends AbstractController
                             "type" => "text",
                             "id" => "text-2",
                             "text" => sprintf("The '%s' component was clicked", $componentId),
+                        ],
+                        [
+                            "type" => "text",
+                            "id" => "text-3",
+                            "text" => sprintf("It is %s now", $time),
                         ],
                         [
                             "type" => "button",
