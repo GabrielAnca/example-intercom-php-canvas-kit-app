@@ -2,6 +2,8 @@
 
 This example was tested using PHP 7.4
 
+![demo-gif](https://user-images.githubusercontent.com/251391/82574571-39bc1200-9b7f-11ea-8ee8-4e8588d2b66c.gif)
+
 See the complete API reference in the [documentation](https://developers.intercom.com/canvas-kit-reference/reference/introduction).
 
 ## Set up
