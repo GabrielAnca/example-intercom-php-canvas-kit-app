@@ -2,18 +2,18 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MessengerAppController extends AbstractController
+class MessengerAppController
 {
     /**
      * @Route("/messenger_app/initialize", methods={"POST"}, name="messenger_app_initialize")
      */
     public function initialize()
     {
-        return $this->json([
+        $response = [
             'canvas' => [
                 'content' => [
                     'components' => [
@@ -34,7 +34,9 @@ class MessengerAppController extends AbstractController
                     ]
                 ]
             ]
-        ]);
+        ];
+
+        return new JsonResponse($response);
     }
 
     /**
@@ -46,7 +48,7 @@ class MessengerAppController extends AbstractController
         $componentId = $requestBody->component_id;
         $time = date('H:i:s');
 
-        return $this->json([
+        $response = [
             'canvas' => [
                 'content' => [
                     'components' => [
@@ -77,6 +79,8 @@ class MessengerAppController extends AbstractController
                     ]
                 ]
             ]
-        ]);
+        ];
+
+        return new JsonResponse($response);
     }
 }
